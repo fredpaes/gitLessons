@@ -22,7 +22,10 @@
 			<div class="slides">
 				<section id="home">
 					<h1>GIT</h1>
-					<img class="img_tun" src="./assets/divelia_icon.png" alt="Divelia">
+					<img class="img_tun" src="./assets/divelia_logo.png" alt="Divelia">
+				</section>
+				<section id="intro">
+					<img class="img_intro" src="./assets/introduccion.png" alt="folders">
 				</section>
 				<section id="que-es" data-markdown>
 					<textarea data-template>
@@ -36,13 +39,14 @@
 				<section id="install-git">
 					<section id="get-git">
 						<h2>Instalando GIT</h2>
-						<img class="img_tun" src="./assets/git_icon.png" alt="git">
+						<img class="img_tun" src="./assets/git_icon_w.png" alt="git">
 					</section>
 					<section id="get-git-windows" data-markdown>
 						<textarea data-template>
 							### WINDOWS
 							Descargar el ejecutable del sitio oficial de <a target="_blank" href="https://git-scm.com/download/win"><strong>GIT SCM</strong></a>
-							> Puedes optar por Chocolatey.
+							
+							` > choco install git --version=2.21.0 `
 						</textarea>
 					</section>
 					<section id="get-git-ubuntu" data-markdown>
@@ -115,7 +119,7 @@
 				<section id="branches">
 					<section id="general-branches">
 						<h3>RAMAS</h3>
-						<img class="img_tun" src="./assets/branches_git.png" alt="git branches">
+						<img class="img_tun" src="./assets/git_branches.png" alt="git branches">
 					</section>
 					<section id="cmd-branches" data-markdown>
 						<textarea data-template>
@@ -142,25 +146,26 @@
 						> El estado de los archivos de la rama nueva será desde donde estamos creándola
 					</section>
 				</section>
-				<section id="daily-use">
-					<section id="general-use" data-markdown>
-						<textarea data-template>
-							### USO COTIDIANO EN EQUIPOS
-							- Clone
-							- Pull && Push
-							- Merge
-						</textarea>
-					</section>
+				<section id="teamwork" data-markdown>
+					<textarea data-template>
+						### TRABAJANDO EN EQUIPO
+						|  | COMANDO |
+						| :----- | :----- |
+						| Clonar un repositorio | ` git clone ` |
+						| Obtener los cambios remotos | ` git pull origin master ` |
+						| Enviar mis cambios | ` git push origin master ` |
+						| Unir ramas | ` git merge rama_nueva ` |
+					</textarea>
 				</section>
-				<section id="extra">
-					<section id="general-extra" data-markdown>
-						<textarea data-template>
-							### EXTRAS
-							- Ignorar archivos
-							- Mantener directorios
-							- Revisar el log de cambios
-						</textarea>
-					</section>
+				<section id="extra" data-markdown>
+					<textarea data-template>
+						### EXTRAS
+						|  |  |
+						| :----- | :----- |
+						| Ignorar archivos | **.gitignore** |
+						| Mantener directorios | **.gitkeep** |
+						| Revisar el log de cambios | ` git log `<br>` git log --oneline `<br>` git log --graph ` |
+					</textarea>
 				</section>
 			</div>
 		</div>
@@ -168,7 +173,10 @@
 
 		<style>
 		.reveal .slide-background {
-			/* background-color: rgba(0, 0, 0, 0.4); */
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+		.reveal section img.img_intro {
+			max-width: 40%;
 		}
 		.reveal section img.img_tun {
 			background: none;
@@ -192,7 +200,6 @@
 				hash: true,
 				history: true,
 				transition: 'slide',
-				// parallaxBackgroundImage: 'https://miro.medium.com/max/10000/1*v6XeL5ZKVBpwwZlqHp-Isw.jpeg',
 				parallaxBackgroundImage: 'https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg',
 				parallaxBackgroundSize: '2100px 900px',
 				dependencies: [

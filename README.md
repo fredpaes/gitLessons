@@ -1,6 +1,6 @@
 __________________________________
-# Resumen
-# Introducción
+# RESUMEN
+# INTRODUCCIÓN
 ## Qué es git
 Es un software de control de versiones, para el mantenimiento de código fuente.
 
@@ -8,7 +8,7 @@ Su principal propósito es mantener el registro de cambios y coordinar el trabaj
 
 Diseñado por Linus Torvalds.
 
-## Instalación
+## INSTALACIÓN
 ### Ubuntu
 ```
 sudo apt install git
@@ -19,14 +19,14 @@ Descargar el ejecutable desde [GIT SCM](https://git-scm.com/download/win)
 ```
 brew install git
 ```
-Para revisar la instalación/versión:
+Para revisar la instalación / versión:
 ```
 git --version
 ```
 
-## Configuración
+## CONFIGURACIÒN
 ```
-git config --global user.name "fredpaes"
+git config --global user.name "Fred Paucar Espinoza"
 
 git config --global user.email fred.paucarespinoza@gmail.com
 ```
@@ -34,7 +34,8 @@ Para revisar la configuración:
 ```
 git config --list
 ```
-## Estados de git
+
+## ESTADOS DE GIT
 ### Working Directory
 Área de trabajo local
 ### Staging Area
@@ -42,6 +43,7 @@ git config --list
 ### Repository
 Repositorio donde está almacenado el proyecto
 
+![alt text](./assets/git_stages.png "GIT STAGES")
 <!-- >Ejemplo
 > `git init`
 > `touch file{1..10}.txt`
@@ -55,25 +57,29 @@ Repositorio donde está almacenado el proyecto
 > `git commit -am "Se hizo la modificación del segundo archivo"`
 > TRUCO `-am` -->
 
-## BRANCH
-### revisión
-`git branch`
-### creación
-`git branch rama_nueva`
-### navegación
-`git checkout master`
-### eliminación
-`git branch -d rama_nueva`
-### TIP
-`git checkout -b rama_truco`
-> `git status`
+## RAMAS
+| ACCIÓN | COMANDO |
+| :----- | :-----: |
+| Revisión | ` git branch ` |
+| Creación | ` git branch new_feature ` |
+| Navegación | ` git checkout master ` |
+| Eliminación | ` git branch -d hot_fix ` |
+### Tip
+> Para crear y movernos a una nueva rama `git checkout -b rama_tip`
+
 * El estado de los archivos de la rama nueva será desde donde estamos creándola
 
-## PULL && PUSH
-## CLONE
-## MERGE
+## TRABAJANDO EN EQUIPO
+| ACCIÓN | COMANDO |
+| :----- | :----- |
+| Clonar un repositorio | ` git clone <url_del_repositorio>` |
+| Obtener los cambios remotos | ` git pull origin master ` |
+| Enviar mis cambios | ` git push origin master ` |
+| Unir ramas | ` git merge rama_nueva ` |
 
-## EXTRA
-- .gitignore
-- .gitkeep
-- `git log` && `git log --oneline` && `git log --graph` &&& viaje en el tiempo - recuperando archivos eliminados
+## EXTRAS
+| ACCIÓN | SOLUCIÓN |
+| :----- | :----- |
+| Ignorar archivos | **.gitignore** |
+| Mantener directorios | **.gitkeep** |
+| Revisar el log de cambios | ` git log `<br>` git log --oneline `<br>` git log --graph ` |
