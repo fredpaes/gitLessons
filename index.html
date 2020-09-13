@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>GIT | DIVELIA</title>
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/reveal.css">
+		<link rel="stylesheet" href="./css/theme/blood.css">
+		<link rel="stylesheet" href="./lib/css/monokai.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './css/print/pdf.css' : './css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="home">
+					<h1>GIT</h1>
+					<img class="img_tun" src="./assets/divelia_icon.png" alt="Divelia">
+				</section>
+				<section id="que-es" data-markdown>
+					<textarea data-template>
+						## ¿Qué es GIT?
+						Es un software de control de versiones, para el mantenimiento de código fuente.
+						<aside class="notes">
+							Su principal propósito es mantener el registro de cambios y coordinar el trabajo que varias personas realizan sobre archivos compartidos.
+						</aside>
+					</textarea>
+				</section>
+				<section id="install-git">
+					<section id="get-git">
+						<h2>Instalando GIT</h2>
+						<img class="img_tun" src="./assets/git_icon.png" alt="git">
+					</section>
+					<section id="get-git-windows" data-markdown>
+						<textarea data-template>
+							### WINDOWS
+							Descargar el ejecutable del sitio oficial de <a target="_blank" href="https://git-scm.com/download/win"><strong>GIT SCM</strong></a>
+							> Puedes optar por Chocolatey.
+						</textarea>
+					</section>
+					<section id="get-git-ubuntu" data-markdown>
+						<textarea data-template>
+							### UBUNTU
+							``` $ sudo apt install git ```
+						</textarea>
+					</section>
+					<section id="get-git-macos" data-markdown>
+						<textarea data-template>
+							### MACOS
+							``` $ brew install git ```
+						</textarea>
+					</section>
+					<section id="check-git" data-markdown>
+						<textarea data-template>
+							#### Verificación
+							``` $ git --version ```
+							```
+							git version 2.20.1
+							```
+						</textarea>
+					</section>
+				</section>
+				<section id="configure-git">
+					<section id="set-credentials" data-markdown>
+						<textarea data-template>
+							### CONFIGURACIÓN
+							- Nombre de Usuario<br>
+							` git config --global user.name "user" `
+							- Correo<br>
+							` git config --global user.email user@test.com `
+						</textarea>
+					</section>
+					<section id="check-credentials" data-markdown>
+						<textarea data-template>
+							#### Verificación
+							` git config --list `
+						</textarea>
+					</section>
+				</section>
+				<section id="stages-git">
+					<section id="general-stages">
+						<h3>Estados de GIT</h3>
+						<img class="img_tun" src="./assets/git_stages.png" alt="git stages">
+					</section>
+					<section id="desc-stages" data-markdown>
+						<textarea data-template>
+							| ESTADOS |  | COMANDO |
+							| :-----: | :----- | :-----: |
+							| Working Directory | Área local de trabajo | ` git init ` |
+							| Staging Area | Área de preparación | ` git add ` |
+							| Repository | Donde se almacena el proyecto | ` git commit ` |
+						</textarea>
+					</section>
+					<section>
+						<h3 class="lets_code">LET'S CODE</h3>
+					</section>
+					<!-- <section id="cmd-stages" data-markdown></section> -->
+					<section id="tip-stages" data-markdown>
+						### TIP
+						Para agregar los cambios y commitear a la vez
+						
+						**_git commit -am_**
+						```git
+						git commit -am "Mensaje bien detallado de cambios efectuados"
+						```
+					</section>
+				</section>
+				<section id="branches">
+					<section id="general-branches">
+						<h3>RAMAS</h3>
+						<img class="img_tun" src="./assets/branches_git.png" alt="git branches">
+					</section>
+					<section id="cmd-branches" data-markdown>
+						<textarea data-template>
+							|  | COMANDO |
+							| :----- | :-----: |
+							| Revisión | ` git branch ` |
+							| Creación | ` git branch new_feature ` |
+							| Navegación | ` git checkout master ` |
+							| Eliminación | ` git branch -d hot_fix ` |
+						</textarea>
+					</section>
+					<section>
+						<h3 class="lets_code">LET'S CODE</h3>
+					</section>
+					<section id="tip-branches" data-markdown>
+						### TIP
+						Para crear y movernos a la nueva rama
+						
+						**_git checkout -b_**
+						```git
+						git checkout -b nueva_rama
+						```
+
+						> El estado de los archivos de la rama nueva será desde donde estamos creándola
+					</section>
+				</section>
+				<section id="daily-use">
+					<section id="general-use" data-markdown>
+						<textarea data-template>
+							### USO COTIDIANO EN EQUIPOS
+							- Clone
+							- Pull && Push
+							- Merge
+						</textarea>
+					</section>
+				</section>
+				<section id="extra">
+					<section id="general-extra" data-markdown>
+						<textarea data-template>
+							### EXTRAS
+							- Ignorar archivos
+							- Mantener directorios
+							- Revisar el log de cambios
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+
+
+		<style>
+		.reveal .slide-background {
+			/* background-color: rgba(0, 0, 0, 0.4); */
+		}
+		.reveal section img.img_tun {
+			background: none;
+			border: none;
+			box-shadow: none;
+		}
+		h3.lets_code {
+			color: #a23;
+		}
+		#tip-branches blockquote {
+			font-size: 20px;
+			font-style: italic;
+			font-weight: bolder;
+		}
+		</style>
+
+		<script src="./js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controlsLayout: 'edges',
+				hash: true,
+				history: true,
+				transition: 'slide',
+				// parallaxBackgroundImage: 'https://miro.medium.com/max/10000/1*v6XeL5ZKVBpwwZlqHp-Isw.jpeg',
+				parallaxBackgroundImage: 'https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg',
+				parallaxBackgroundSize: '2100px 900px',
+				dependencies: [
+					// Interpret Markdown in <section> elements
+					{ src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// Syntax highlight for <code> elements
+					{ src: './plugin/highlight/highlight.js', async: true },
+					// Zoom in and out with Alt+click or cmd+click(Mac)
+					{ src: './plugin/zoom-js/zoom.js', async: true },
+					// Speaker notes
+					{ src: './plugin/notes/notes.js', async: true },
+				]
+			});
+			Reveal.configure({ showSlideNumber: 'print' });
+		</script>
+	</body>
+</html>
